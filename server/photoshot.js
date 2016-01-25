@@ -7,11 +7,11 @@ Slingshot.fileRestrictions("myImageUploads", {
 
 
 Slingshot.createDirective("myImageUploads", Slingshot.S3Storage, {
-  AWSAccessKeyId: "",
-  AWSSecretAccessKey: "",
-  bucket: "",
+  AWSAccessKeyId: "AWS_ACCESS_KEY_ID",
+  AWSSecretAccessKey: "AWS_SECRET_ACCESS_KEY",
+  bucket: "BUCKET_NAME",
   acl: "public-read",
-  region: "us-west-2",
+  region: "S3_REGION",
 
   authorize: function () {
     if (!this.userId) {
